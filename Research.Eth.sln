@@ -20,6 +20,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.Tests", "src\R
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F7450924-6E20-46DA-97F6-13D8662AE993}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{92218DFF-07CE-4E02-8516-DF58B7B03CF7}"
+	ProjectSection(SolutionItems) = preProject
+		artifacts\stack.yml = artifacts\stack.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
