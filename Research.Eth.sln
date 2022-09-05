@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.Api", "src\Res
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.Persistence", "src\Research.Eth.Persistence\Research.Eth.Persistence.csproj", "{EE3EAE56-3332-4066-9F06-87444627D5AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.Persistence.Providers", "src\Research.Eth.Persistence.Providers\Research.Eth.Persistence.Providers.csproj", "{62CD190C-DB35-4B51-8120-AC47E135B6A1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.Persistence.Extensions", "src\Research.Eth.Persistence.Extensions\Research.Eth.Persistence.Extensions.csproj", "{62CD190C-DB35-4B51-8120-AC47E135B6A1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.Persistence.Mongo", "src\Research.Eth.Persistence.Mongo\Research.Eth.Persistence.Mongo.csproj", "{560D4264-B6DA-49C2-AE76-E3AD88700D76}"
 EndProject

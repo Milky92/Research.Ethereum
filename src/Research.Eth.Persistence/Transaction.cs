@@ -1,8 +1,9 @@
 using System.Transactions;
+using MongoDB.Bson;
 
 namespace Research.Eth.Persistence;
 
-public class Transaction
+public class Transaction:EntityBase<ObjectId>
 {
     public string Hash { get; set; }
     public Address From { get; set; }
