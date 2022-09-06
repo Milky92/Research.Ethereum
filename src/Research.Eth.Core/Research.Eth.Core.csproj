@@ -7,11 +7,28 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.EventLog" Version="6.0.0" />
       <PackageReference Include="Nethereum.Web3" Version="4.7.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Research.Eth.Commons\Research.Eth.Commons.csproj" />
+      <ProjectReference Include="..\Research.Eth.Persistence.Mongo\Research.Eth.Persistence.Mongo.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+        <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.configuration.abstractions\6.0.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Features\Dtos" />
     </ItemGroup>
 
 </Project>
