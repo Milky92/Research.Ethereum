@@ -8,13 +8,12 @@ public static class MongoSetupExtension
 {
     private const string DefaultSection = "MongoDb";
 
-    public static IServiceCollection AddMongoDbContext(this IServiceCollection container, 
+    public static IServiceCollection AddMongoDbContext(this IServiceCollection container,
         IConfiguration configuration,
         string section = DefaultSection)
     {
-         return container.Configure<DatabaseSettings>
-        (
-            (Action<DatabaseSettings>)(opts => configuration.GetSection(section).Bind((object)opts))
-        ).AddSingleton<IMongoDb, MongoDb>();
+        return container
+            .Configure<DatabaseSettings>(opts => configuration.GetSection(section).Bind(opts))
+            .AddSingleton<IMongoDb, MongoDb>();
     }
 }
