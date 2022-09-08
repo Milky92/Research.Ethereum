@@ -1,9 +1,11 @@
-namespace Research.Eth.Persistence;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace Research.Eth.Persistence.Models;
 
 public abstract class EntityBase<TK>
 {
-    public TK Id { get; }
+    [BsonId]
+    public TK Id { get; set; }
     public DateTime Created { get; } = DateTime.UtcNow;
     public DateTime Updated { get; set; }
-    
 }

@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "artifacts", "artifacts", "{
 		artifacts\stack.yml = artifacts\stack.yml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research.Eth.DataAccess", "src\Research.Eth.DataAccess\Research.Eth.DataAccess.csproj", "{D80C791F-8915-45AB-9847-C612421CD77A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,7 @@ Global
 		{560D4264-B6DA-49C2-AE76-E3AD88700D76} = {A1295F33-A88D-4428-B3F4-E60A92D0AEFA}
 		{F7450924-6E20-46DA-97F6-13D8662AE993} = {A1295F33-A88D-4428-B3F4-E60A92D0AEFA}
 		{1B9A6376-A032-4C69-ADA0-6957CE34E4C6} = {F7450924-6E20-46DA-97F6-13D8662AE993}
+		{D80C791F-8915-45AB-9847-C612421CD77A} = {A1295F33-A88D-4428-B3F4-E60A92D0AEFA}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AC3B2288-1D9D-4305-883B-D2AF6E18C642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -74,5 +77,9 @@ Global
 		{1B9A6376-A032-4C69-ADA0-6957CE34E4C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B9A6376-A032-4C69-ADA0-6957CE34E4C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B9A6376-A032-4C69-ADA0-6957CE34E4C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D80C791F-8915-45AB-9847-C612421CD77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D80C791F-8915-45AB-9847-C612421CD77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D80C791F-8915-45AB-9847-C612421CD77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D80C791F-8915-45AB-9847-C612421CD77A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

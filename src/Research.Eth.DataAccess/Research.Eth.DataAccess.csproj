@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Research.Eth.Persistence.Mongo\Research.Eth.Persistence.Mongo.csproj" />
+      <ProjectReference Include="..\Research.Eth.Persistence\Research.Eth.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

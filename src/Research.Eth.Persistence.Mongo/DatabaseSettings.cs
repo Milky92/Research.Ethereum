@@ -16,6 +16,8 @@ public class DatabaseSettings
     /// Get or set data base options.
     /// </summary>
     public DatabaseConfigurationOptions DatabaseOptions { get; set; } = null!;
+    
+    public CredentialOptions Credentials { get; set; }
 }
 
 public class ServerConfigurationOptions
@@ -71,4 +73,11 @@ public class DbServerAddress
 
         return $"{host}:{port}";
     }
+}
+
+
+public class CredentialOptions
+{
+    public string User { get; set; }
+    public string Password { get; set; }
 }

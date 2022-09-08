@@ -1,7 +1,7 @@
 using System.Transactions;
 using MongoDB.Bson;
 
-namespace Research.Eth.Persistence;
+namespace Research.Eth.Persistence.Models;
 
 public class Transaction:EntityBase<ObjectId>
 {

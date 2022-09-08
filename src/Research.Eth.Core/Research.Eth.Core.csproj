@@ -18,6 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Research.Eth.Commons\Research.Eth.Commons.csproj" />
+      <ProjectReference Include="..\Research.Eth.DataAccess\Research.Eth.DataAccess.csproj" />
       <ProjectReference Include="..\Research.Eth.Persistence.Mongo\Research.Eth.Persistence.Mongo.csproj" />
     </ItemGroup>
 

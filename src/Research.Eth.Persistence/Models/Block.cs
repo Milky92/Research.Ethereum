@@ -1,4 +1,4 @@
-namespace Research.Eth.Persistence;
+namespace Research.Eth.Persistence.Models;
 
 public class Block
 {

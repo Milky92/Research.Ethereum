@@ -5,7 +5,7 @@ using Research.Eth.Persistence.Extensions.Wrappers;
 
 namespace Research.Eth.Persistence.Mongo;
 
-public sealed class MongoDbContext
+public class MongoDbContext
 {
     private readonly IMongoDb _mongodb;
     private readonly IClientSessionHandle _session;

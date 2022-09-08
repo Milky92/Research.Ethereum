@@ -14,7 +14,7 @@ public class MongoDb : IMongoDb
 
     public MongoDb(IOptions<DatabaseSettings> options)
     {
-         _ = options.Value ?? throw new ArgumentNullException(nameof(options));
+        _ = options.Value ?? throw new ArgumentNullException(nameof(options));
 
         _mongoClient = new MongoClient(BuildSettings(options.Value));
 
@@ -22,16 +22,18 @@ public class MongoDb : IMongoDb
     }
 
     public IMongoDatabase Database => _database;
-    
+
     public async ValueTask<IClientSessionHandle> Initialize(MongoDbContext context, CancellationToken token)
     {
         var sets = InitDbCollections(context).ToList();
-        
+
         _session = await _mongoClient.StartSessionAsync(cancellationToken: token);
+
+        var exists = await _database.ListCollectionNamesAsync(_session, new ListCollectionNamesOptions(), token);
         
         foreach (var (type, name) in sets)
         {
-            if (type != null)
+            if (type != null && exists.ToEnumerable().All(p => p != name))
                 await _database.CreateCollectionAsync(!string.IsNullOrEmpty(name) ? name : type.Name,
                     cancellationToken: token)!;
         }
@@ -46,9 +48,9 @@ public class MongoDb : IMongoDb
 
     public async ValueTask CommitTransactionASync(CancellationToken token)
         => await _session.CommitTransactionAsync(token);
-    
+
     public async ValueTask RollbackTransactionAsync(CancellationToken token)
-    => await _session.AbortTransactionAsync(token);
+        => await _session.AbortTransactionAsync(token);
 
     private IEnumerable<(Type?, string)> InitDbCollections(MongoDbContext context)
     {
@@ -83,13 +85,19 @@ public class MongoDb : IMongoDb
 
         mongoClientSettings.ServerApi = new ServerApi(ServerApiVersion.V1);
         mongoClientSettings.LinqProvider = LinqProvider.V3;
-        
+
         mongoClientSettings.Server = options.Server.Address.Port is not null
             ? new MongoServerAddress(options.Server.Address.Host, options.Server.Address.Port ?? default)
             : new MongoServerAddress(options.Server.Address.Host);
 
         mongoClientSettings.UseTls = options.Server.UseTls;
         mongoClientSettings.RetryReads = options.Server.RetryReads;
+        
+        //mk mktest
+        mongoClientSettings.Credential = MongoCredential.CreateCredential(
+            "admin",
+            options.Credentials.User,
+            options.Credentials.Password);
 
         return mongoClientSettings;
     }
