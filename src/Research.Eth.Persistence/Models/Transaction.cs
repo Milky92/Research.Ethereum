@@ -6,12 +6,12 @@ namespace Research.Eth.Persistence.Models;
 public class Transaction:EntityBase<ObjectId>
 {
     public string Hash { get; set; }
-    public Address From { get; set; }
-    public Address To { get; set; }
-    public decimal Value { get; set; }
-    public decimal Fee { get; set; }
+    public string From { get; set; }
+    public string To { get; set; }
+    public string TokenAddress { get; set; }
+    public long Value { get; set; }
+    public long Fee { get; set; }
     public string TraceTypeAddress { get; set; }
-    public int Precision { get; set; }
     public int Nonce { get; set; }
     public int Position { get; set; }
 

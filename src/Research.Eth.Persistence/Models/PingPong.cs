@@ -1,5 +1,3 @@
-using MongoDB.Bson;
-
 namespace Research.Eth.Persistence.Models;
 
 [Serializable]

@@ -9,7 +9,5 @@ public class AppDbContext:MongoDbContext
     public AppDbContext(IServiceProvider serviceProvider, IOptions<DatabaseSettings> options) : base(serviceProvider, options)
     {
     }
-
     public NoSqlCollection<PingPong> PingPong { get; set; }
-    
 }
